@@ -27,6 +27,11 @@ import com.amazonaws.services.lambda.runtime.events.SNSEvent.SNSRecord;
  */
 public class ProcessSNSEvents implements RequestHandler<SNSEvent, Context> {
 
+	
+	public ProcessSNSEvents() {
+		
+	}
+	
 	public Context handleRequest(SNSEvent input, Context context) {
 
 		List<Pair<String, String>> list = parseSNSEvent(input);
